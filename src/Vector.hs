@@ -10,7 +10,7 @@ instance Num (Vector) where
     abs    (Vector x y z) = Vector (abs x) (abs y) (abs z)
     negate (Vector x y z) = Vector (-x)    (-y)    (-z)
     signum (Vector x y z) = Vector (signum x) (signum y) (signum z)
-    fromInteger = \_ -> Vector 0.0 0.0 0.0
+    fromInteger _ = Vector 0.0 0.0 0.0
 
 
 add, sub, mul :: Vector -> Vector -> Vector
